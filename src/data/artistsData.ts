@@ -4,6 +4,8 @@ export interface Painting {
   year: string;
   image: string;
   description: string;
+  artistName?: string;
+  orientation: 'horizontal' | 'vertical';
 }
 
 export interface Artist {
@@ -28,21 +30,24 @@ export const artistsData: Artist[] = [
         title: "Звездная ночь",
         year: "1889",
         image: "/img/vanGog/1.jpg",
-        description: "Одна из самых известных картин ван Гога, написанная в лечебнице Сен-Реми."
+        description: "Одна из самых известных картин ван Гога, написанная в лечебнице Сен-Реми.",
+        orientation: "horizontal" // Горизонтальная
       },
       {
         id: 102,
         title: "Автопортрет с перевязанным ухом и трубкой",
         year: "1889",
         image: "/img/vanGog/2.jpg",
-        description: "Знаменитый автопортрет после инцидента с ухом."
+        description: "Знаменитый автопортрет после инцидента с ухом.",
+        orientation: "vertical" // Вертикальная
       },
       {
         id: 103,
         title: "Ваза с васильками и маками",
         year: "1887",
         image: "/img/vanGog/3.jpg",
-        description: "Яркий натюрморт с полевыми цветами."
+        description: "Яркий натюрморт с полевыми цветами.",
+        orientation: "vertical" // Вертикальная
       }
     ]
   },
@@ -58,21 +63,24 @@ export const artistsData: Artist[] = [
         title: "Мона Лиза",
         year: "1503-1506",
         image: "/img/leoDav/1.jpg",
-        description: "Знаменитый портрет Лизы дель Джокондо, одна из самых известных картин в мире."
+        description: "Знаменитый портрет Лизы дель Джокондо, одна из самых известных картин в мире.",
+        orientation: "vertical" // Горизонтальная
       },
       {
         id: 202,
         title: "Тайная вечеря",
         year: "1495-1498",
         image: "/img/leoDav/2.jpg",
-        description: "Фреска с изображением последней трапезы Христа с учениками."
+        description: "Фреска с изображением последней трапезы Христа с учениками.",
+        orientation: "horizontal" // Горизонтальная
       },
       {
         id: 203,
         title: "Дама с горностаем",
         year: "1489-1490",
         image: "/img/leoDav/3.jpg",
-        description: "Портрет Чечилии Галлерани, возлюбленной Лодовико Сфорца."
+        description: "Портрет Чечилии Галлерани, возлюбленной Лодовико Сфорца.",
+        orientation: "vertical" // Вертикальная
       }
     ]
   },
@@ -88,21 +96,24 @@ export const artistsData: Artist[] = [
         title: "Большой рейд в Кронштадте",
         year: "1836",
         image: "/img/aivazovskiy/1.png",
-        description: "Ранняя работа художника, демонстрирующая мастерство в изображении морских пейзажей."
+        description: "Ранняя работа художника, демонстрирующая мастерство в изображении морских пейзажей.",
+        orientation: "horizontal" // Горизонтальная
       },
       {
         id: 302,
         title: "Берег моря ночью. У маяка",
         year: "1837",
         image: "/img/aivazovskiy/2.jpg",
-        description: "Ночной морской пейзаж с маяком, передающий таинственность морской стихии."
+        description: "Ночной морской пейзаж с маяком, передающий таинственность морской стихии.",
+        orientation: "horizontal" // Горизонтальная
       },
       {
         id: 303,
         title: "Лунная ночь в Крыму. Гурзуф",
         year: "1839",
         image: "/img/aivazovskiy/3.jpg",
-        description: "Романтический пейзаж с лунной дорожкой на морской глади."
+        description: "Романтический пейзаж с лунной дорожкой на морской глади.",
+        orientation: "horizontal" // Горизонтальная
       }
     ]
   },
@@ -118,21 +129,24 @@ export const artistsData: Artist[] = [
         title: "Кувшинки",
         year: "1916",
         image: "/img/mone/1.jpg",
-        description: "Из знаменитой серии картин с кувшинками из сада в Живерни."
+        description: "Из знаменитой серии картин с кувшинками из сада в Живерни.",
+        orientation: "horizontal" // Горизонтальная
       },
       {
         id: 402,
         title: "В норвежской лодке в Живерни",
         year: "1887",
         image: "/img/mone/2.jpg",
-        description: "Сцена с лодкой на реке Эпт, отражающая интерес Моне к водной поверхности."
+        description: "Сцена с лодкой на реке Эпт, отражающая интерес Моне к водной поверхности.",
+        orientation: "horizontal" // Горизонтальная
       },
       {
         id: 403,
         title: "Дома на реке Заан в Заандаме",
         year: "1871",
         image: "/img/mone/3.jpg",
-        description: "Голландский пейзаж, написанный во время пребывания Моне в Нидерландах."
+        description: "Голландский пейзаж, написанный во время пребывания Моне в Нидерландах.",
+        orientation: "horizontal" // Горизонтальная
       }
     ]
   },
@@ -148,21 +162,24 @@ export const artistsData: Artist[] = [
         title: "Обращение святого Павла",
         year: "1542-1545",
         image: "/img/miki/1.jpg",
-        description: "Фреска из капеллы Паолина в Ватикане."
+        description: "Фреска из капеллы Паолина в Ватикане.",
+        orientation: "vertical" 
       },
       {
         id: 502,
         title: "Мучения Святого Антония",
         year: "1487-1488",
         image: "/img/miki/2.jpg",
-        description: "Ранняя работа художника, созданная в подростковом возрасте."
+        description: "Ранняя работа художника, созданная в подростковом возрасте.",
+        orientation: "vertical"
       },
       {
         id: 503,
         title: "Тондо Дони",
         year: "1506-1507",
         image: "/img/miki/3.jpg",
-        description: "Единственная сохранившаяся станковая картина Микеланджело."
+        description: "Единственная сохранившаяся станковая картина Микеланджело.",
+        orientation: "vertical" // Вертикальная
       }
     ]
   }
