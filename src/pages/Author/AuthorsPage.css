@@ -1,0 +1,143 @@
+.authors-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.authors-page-title {
+  text-align: center;
+  color: var(--main-text-color);
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.authors-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.author-card-page {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  border: 1px solid #f0f0f0;
+  display: flex;
+  min-height: 250px;
+}
+
+.author-image-container {
+  width: 300px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.author-image-page {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.author-info-page {
+  padding: 2rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.author-header {
+  margin-bottom: 1rem;
+}
+
+.author-name-page {
+  color: var(--main-text-color);
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.author-years-page {
+  color: var(--accent-terracotta-color);
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.author-bio-page {
+  color: var(--secondary-text-color);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.author-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.details-btn-page {
+  background: var(--accent-gold-color);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.details-btn-page:hover {
+  background: var(--accent-terracotta-color);
+}
+
+@media (max-width: 768px) {
+  .authors-page {
+    padding: 1rem;
+  }
+
+  .authors-page-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .author-card-page {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .author-image-container {
+    width: 100%;
+    height: 200px;
+  }
+
+  .author-info-page {
+    padding: 1.5rem;
+  }
+
+  .author-name-page {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .author-info-page {
+    padding: 1.2rem;
+  }
+
+  .author-name-page {
+    font-size: 1.2rem;
+  }
+
+  .details-btn-page {
+    width: 100%;
+    text-align: center;
+  }
+}

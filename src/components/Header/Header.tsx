@@ -5,14 +5,12 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header-container">
-        {/* Логотип с ссылкой на главную */}
         <div className="logo">
           <a href="/" className="logo-link">
             <span className="logo-text">ArtGallery</span>
           </a>
         </div>
 
-        {/* Навигация */}
         <nav className="nav">
           <ul className="nav-list">
             <li className="nav-item">
@@ -21,7 +19,7 @@ const Header = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a href="/author" className="nav-link">
+              <a href="/authors" className="nav-link">  
                 Художники
               </a>
             </li>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { artistsData } from '../../data/artistsData';
-// import './Authors.css';
+import './Authors.css';
 
 const Authors: React.FC = () => {
   const navigate = useNavigate();
@@ -14,9 +14,9 @@ const Authors: React.FC = () => {
     <section className="authors-section">
       <div className="container">
         <h2 className="section-title">Знаменитые художники</h2>
-        <div className="authors-grid">
+        <div className="authors-grid-main"> 
           {artistsData.map(artist => (
-            <div key={artist.id} className="author-card">
+            <div key={artist.id} className="author-card-main"> 
               <div className="author-card__image">
                 <img 
                   src={artist.image} 
