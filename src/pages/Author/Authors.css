@@ -1,0 +1,103 @@
+.authors-section {
+  padding: 4rem 0;
+  background: var(--background-color);
+}
+
+.section-title {
+  text-align: center;
+  color: var(--main-text-color);
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+.authors-grid-main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.author-card-main {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f8f9fa;
+  text-align: center;
+}
+
+.author-card__image {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px 12px 0 0;
+}
+
+.author-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 12px 12px 0 0;
+}
+
+.author-card__content {
+  padding: 1.5rem;
+}
+
+.author-card__name {
+  color: var(--main-text-color);
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.author-card__years {
+  color: var(--accent-terracotta-color);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.details-button {
+  background: var(--accent-gold-color);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+.details-button:hover {
+  background: var(--accent-terracotta-color);
+}
+
+/* Адаптивность для главной страницы */
+@media (max-width: 1024px) {
+  .authors-grid-main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .authors-section {
+    padding: 2rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .authors-grid-main {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .author-card__image {
+    height: 180px;
+  }
+}
