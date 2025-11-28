@@ -1,0 +1,134 @@
+.authors-section {
+  padding: 80px 0;
+  background: var(--background-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: var(--main-text-color);
+  font-weight: 700;
+}
+
+.authors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center; 
+}
+
+.author-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px; 
+}
+
+
+.author-card__image {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.author-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.author-card:hover .author-card__image img {
+  transform: scale(1.05);
+}
+
+.author-card__content {
+  padding: 25px;
+  text-align: center;
+}
+
+.author-card__name {
+  font-size: 1.4rem;
+  margin: 0 0 8px 0;
+  color: var(--main-text-color);
+  font-weight: 600;
+}
+
+.author-card__years {
+  color: var(--secondary-text-color);
+  font-size: 1rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.details-button {
+  background: var(--accent-terracotta-color);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.details-button:hover {
+  background: var(--accent-gold-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 171, 64, 0.4);
+}
+
+.authors-grid:has(.author-card:nth-child(5)) {
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+}
+
+.author-card:nth-child(4),
+.author-card:nth-child(5) {
+  grid-column: span 1;
+}
+
+@media (min-width: 1200px) {
+  .authors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .author-card {
+    flex: 0 0 calc(33.333% - 30px);
+    max-width: calc(33.333% - 30px);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .authors-section {
+    padding: 50px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .authors-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .author-card {
+    max-width: 100%;
+  }
+}
