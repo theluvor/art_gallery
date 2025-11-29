@@ -1,0 +1,141 @@
+/* Footer.css */
+.footer {
+  background-color: var(--main-text-color);
+  border-top: 2px solid var(--accent-gold-color);
+  padding: 2rem 0;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+/* Логотип */
+.footer-logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.footer-logo-text:hover {
+  color: var(--accent-gold-color);
+}
+
+/* Навигация */
+.footer-nav-list {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.footer-nav-link:hover {
+  color: var(--accent-gold-color);
+  background-color: rgba(255, 171, 64, 0.1);
+}
+
+.footer-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-gold-color);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.footer-nav-link:hover::after {
+  width: 80%;
+}
+
+/* Надпись по центру */
+.footer-copyright {
+  flex: 1;
+  text-align: center;
+}
+
+.copyright-text {
+  color: var(--accent-gold-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.copyright-text:hover {
+  background-color: rgba(255, 171, 64, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 0 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .footer-nav-list {
+    gap: 1rem;
+    order: 2;
+  }
+
+  .footer-logo-text {
+    font-size: 1.3rem;
+    order: 1;
+  }
+
+  .footer-copyright {
+    order: 3;
+  }
+
+  .copyright-text {
+    font-size: 1rem;
+  }
+
+  .footer-nav-link {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 0;
+  }
+  
+  .footer-nav-list {
+    flex-direction: column;
+    gap: 0.8rem;
+    text-align: center;
+  }
+}
