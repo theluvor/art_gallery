@@ -96,7 +96,7 @@
 }
 
 /* Используем твой product-list класс */
-.paintings-grid {
+.paintings-grids {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -107,7 +107,7 @@
 }
 
 /* Используем твой product-item класс */
-.painting-card {
+.painting-cards {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
@@ -121,7 +121,7 @@
   align-items: center;
 }
 
-.painting-card:hover {
+.painting-cards:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }

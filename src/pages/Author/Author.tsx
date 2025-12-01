@@ -47,9 +47,9 @@ const Author: React.FC = () => {
         {/* Картины художника - используем твои классы */}
         <section className="artist-paintings">
           <h2 className="paintings-title">Картины {artist.name}</h2>
-          <div className="paintings-grid">
+          <div className="paintings-grids">
             {artist.paintings.map(painting => (
-              <div key={painting.id} className="painting-card">
+              <div key={painting.id} className="painting-cards">
                 <div className="painting-card__image">
                   <img 
                     src={painting.image} 

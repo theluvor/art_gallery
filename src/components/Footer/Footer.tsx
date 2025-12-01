@@ -14,7 +14,7 @@ const Footer = () => {
               </a>
             </li>
             <li className="footer-nav-item">
-              <a href="/author" className="footer-nav-link">
+              <a href="/authors" className="footer-nav-link">
                 Художники
               </a>
             </li>
